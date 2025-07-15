@@ -7,19 +7,12 @@
   <link rel="stylesheet" href="stijl.css" />
 </head>
 <body>
- 
+
   <!-- Random reflectiekaarten -->
   <button class="button" onclick="toonKaart()">Trek een reflectiekaart</button>
   <section class="card" id="kaart">
     <p>Klik op de knop om een reflectiekaart te trekken.</p>
   </section>
-
-  <!-- Navigatie -->
-  <nav class="nav">
-    <a href="index.html">Terug naar start</a>
-    <a href="zelfcompassie.html">Zelfcompassie</a>
-    <a href="innerlijk-kind.html">Innerlijk kind</a>
-  </nav>
 
   <script>
     const reflectiekaarten = [
@@ -75,12 +68,12 @@
       }
     ];
 
-    function toonKaart() {
+   function toonKaart() {
       const kaart = reflectiekaarten[Math.floor(Math.random() * reflectiekaarten.length)];
       const kaartHTML = `
         <h3>${kaart.vraag}</h3>
         <p>${kaart.uitleg}</p>
-        <p><em>Reflectievraag:</em> ${kaart.reflectie}</p>
+        <p><em class="reflectie">Reflectievraag:</em> ${kaart.reflectie}</p>
       `;
       document.getElementById('kaart').innerHTML = kaartHTML;
     }
