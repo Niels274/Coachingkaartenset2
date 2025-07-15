@@ -7,69 +7,10 @@
   <link rel="stylesheet" href="stijl.css" />
 </head>
 <body>
-  <h1>Zelfcompassie</h1>
-
-  <!-- Introductiekaarten vaste volgorde -->
-  <section class="card">
-    <h2>Kaart 2.1 – Waar komt het idee van zelfcompassie vandaan?</h2>
-    <p>
-      Het begrip zelfcompassie kreeg wereldwijd bekendheid door het werk van psycholoog Kristin Neff, die het begin 2000 ook wetenschappelijk onderzocht. In haar benadering werd zelfcompassie niet gezien als vaag of ‘zacht’, maar als een innerlijke houding die net zo krachtig en gezond is als zelfvertrouwen – en vaak duurzamer.
-    </p>
-    <p>
-      Zelfcompassie sluit aan bij boeddhistische inzichten over het belang van een vriendelijk hart, en vindt ook raakvlakken in hedendaagse psychologie, zoals mindful self-care en Internal Family Systems.
-    </p>
-    <p>
-      Wat het vernieuwend maakt, is dat het een concreet alternatief biedt voor de automatische reflex van zelfkritiek of emotionele afsplitsing. In plaats van jezelf te veroordelen of je gevoel weg te duwen, leer je aanwezig te blijven bij wat je voelt – mét een innerlijke houding van steun en vriendelijkheid.
-    </p>
-    <p>
-      Zelfcompassie is dus geen trucje of affirmatie. Het is een manier van zijn. En het vraagt oefening.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Kaart 2.2 – Wat is zelfcompassie precies?</h2>
-    <p>
-      Zelfcompassie betekent dat je jezelf tegemoet treedt zoals je dat zou doen bij een dierbare vriend(in): met warmte, begrip en zonder oordeel, juist als je lijdt, faalt of iets moeilijks doormaakt.
-    </p>
-    <p>
-      Kristin Neff onderscheidt drie kernaspecten:
-    </p>
-    <ul>
-      <li><em>Vriendelijkheid tegenover jezelf</em>, in plaats van zelfkritiek</li>
-      <li><em>Gedeelde menselijkheid</em>: erkennen dat iedereen pijn en imperfectie kent</li>
-      <li><em>Mindfulness</em>: bewust aanwezig zijn bij je ervaring, zonder overidentificatie of ontkenning</li>
-    </ul>
-    <p>
-      Zelfcompassie is niet hetzelfde als jezelf zielig vinden. Het betekent ook niet dat je alles goedpraat of niets meer hoeft te veranderen. Het betekent wél dat je leert om jezelf te dragen op moeilijke momenten – zonder hardheid, zonder ontkenning, zonder opsluiting in schuld of schaamte.
-    </p>
-    <p>
-      Dat is niet vanzelfsprekend. Voor veel mensen voelt mildheid bedreigend of ongemakkelijk. Maar hoe vaker je oefent, hoe meer je merkt dat vriendelijkheid naar binnen toe geen zwakte is, maar een bron van kracht.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Kaart 2.3 – Waarom is zelfcompassie zo belangrijk voor persoonlijke ontwikkeling?</h2>
-    <p>
-      Zonder zelfcompassie blijft innerlijke groei afhankelijk van controle, prestatie of strengheid. Je blijft proberen om ‘beter’ te worden, maar het voelt nooit genoeg.
-    </p>
-    <p>
-      Zelfcompassie biedt een ander pad: je ontwikkelt niet door jezelf te corrigeren, maar door jezelf werkelijk te leren kennen én dragen. Juist wanneer je struikelt, geraakt wordt, of je schaamt.
-    </p>
-    <p>
-      Onderzoek laat zien dat mensen die zelfcompassie oefenen veerkrachtiger zijn, gezondere relaties hebben en beter grenzen aangeven. Ze vermijden minder, herstellen sneller van emotionele pijn, en blijven meer in verbinding met zichzelf én anderen.
-    </p>
-    <p>
-      Misschien nog wel belangrijker: zelfcompassie helpt je om met al je innerlijke delen samen te leven. De criticus, het gekwetste kind, het verlangen, de twijfel – alles mag er zijn.
-    </p>
-    <p>
-      Zelfcompassie opent zo de deur naar een leven waarin je jezelf kunt vertrouwen, ook als het moeilijk is. Dat maakt het niet altijd gemakkelijk, maar wél wezenlijk.
-    </p>
-  </section>
-
-  <hr />
 
   <!-- Random reflectiekaarten -->
-  <button class="button" onclick="toonKaart()">Trek een reflectiekaart</button>
+  <button class="button" onclick="toonKaart()">Trek een kaart</button>
+
   <section class="card" id="kaart">
     <p>Klik op de knop om een reflectiekaart te trekken.</p>
   </section>
@@ -140,7 +81,7 @@
       const kaartHTML = `
         <h3>${kaart.vraag}</h3>
         <p>${kaart.uitleg}</p>
-        <p><em>Reflectievraag:</em> ${kaart.reflectie}</p>
+        <p class="reflectie"><em>Reflectievraag:</em> ${kaart.reflectie}</p>
       `;
       document.getElementById('kaart').innerHTML = kaartHTML;
     }

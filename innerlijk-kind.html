@@ -7,61 +7,9 @@
   <link rel="stylesheet" href="stijl.css" />
 </head>
 <body>
-  <h1>Innerlijk Kind</h1>
 
-  <!-- Introductiekaarten vaste volgorde -->
-  <section class="card">
-    <h2>Kaart 3.1 – Waar komt het idee van het innerlijk kind vandaan?</h2>
-    <p>
-      Het concept van het innerlijk kind werd in de jaren ’70 en ’80 bekend door therapeuten als John Bradshaw, Charles Whitfield en Lucia Capacchione. In die tijd ontstond meer aandacht voor de invloed van jeugdervaringen op volwassen gedrag en emotioneel welzijn.
-    </p>
-    <p>
-      Het innerlijk kind staat symbool voor de emotionele herinneringen, behoeften en overlevingsstrategieën die je in je vroege leven hebt ontwikkeld. Deze delen verdwijnen niet als je volwassen wordt – ze blijven in je lichaam, je reacties, je verlangens en je kwetsuren leven.
-    </p>
-    <p>
-      In moderne therapievormen als inner child work, IFS en lichaamsgerichte psychotherapie wordt gewerkt met de levende ervaring van dit innerlijke kind. Niet als abstract idee, maar als een voelbaar deel van jou dat soms gehoord, gezien en gevoeld wil worden.
-    </p>
-    <p>
-      Je innerlijk kind serieus nemen betekent niet dat je blijft hangen in het verleden, maar dat je leert luisteren naar wat daar nog leeft – zodat het niet meer onbewust je leven stuurt.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Kaart 3.2 – Wat is het innerlijk kind precies?</h2>
-    <p>
-      Je innerlijk kind bestaat uit twee grote krachten: het gekwetste kind en het vrije kind.
-    </p>
-    <p>
-      Het <em>gekwetste kind</em> draagt onverwerkte ervaringen: momenten van afwijzing, angst, schaamte of emotionele eenzaamheid. Dit deel kan in het dagelijks leven geraakt worden door iets kleins – een blik, een toon, een gemis aan erkenning – en ineens voel je je machteloos, boos of verdrietig, zonder precies te weten waarom.
-    </p>
-    <p>
-      Het <em>vrije kind</em> daarentegen vertegenwoordigt je oorspronkelijke levendigheid: spontaniteit, nieuwsgierigheid, speelsheid, genieten, precies weten wat je wil. Voor veel mensen is dit deel ook onderdrukt geraakt, omdat het ‘te veel’, ‘te wild’ of ‘niet passend’ was in hun omgeving.
-    </p>
-    <p>
-      Beide kanten wonen nog steeds in je. Ze maken je gevoelig, krachtig, menselijk. Je hoeft ze niet te veranderen – wel te herkennen en uitnodigen in je volwassen leven.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>Kaart 3.3 – Waarom is werken met het innerlijk kind belangrijk voor je ontwikkeling?</h2>
-    <p>
-      Zonder contact met je innerlijk kind blijf je vaak reageren vanuit oude pijn of oude bescherming. Je merkt dat je overprikkeld raakt, je terugtrekt, je aanpast, of juist strijdt om gezien te worden – terwijl je volwassen zelf dat eigenlijk niet wil of nodig heeft.
-    </p>
-    <p>
-      Door je innerlijk kind te leren kennen, krijg je zicht op de oorsprong van je gevoeligheden én op je levenskracht. Je leert onderscheiden: <em>Wat in mij is van toen? Wat is van nu?</em> En vooral: <em>Wat heeft dat jongere deel nog nodig?</em>
-    </p>
-    <p>
-      Wanneer je als volwassene ruimte maakt voor je innerlijke kind, ontstaat er heling. Niet omdat je alles opnieuw beleeft, maar omdat je aanwezig leert blijven bij wat zich aandient – met mildheid, bescherming en nieuwsgierigheid.
-    </p>
-    <p>
-      Het geeft je toegang tot delen van jezelf die eerder gesloten waren: je gevoel, je vreugde, je kwetsbaarheid, je verlangens. En dat maakt innerlijke groei niet alleen inzichtgevend, maar ook wezenlijk bevrijdend.
-    </p>
-  </section>
-
-  <hr />
-
-  <!-- Random reflectiekaarten -->
-  <button class="button" onclick="toonKaart()">Trek een reflectiekaart</button>
+   <!-- Random reflectiekaarten -->
+  <button class="button" onclick="toonKaart()">Trek een kaart</button>
   <section class="card" id="kaart">
     <p>Klik op de knop om een reflectiekaart te trekken.</p>
   </section>
@@ -132,7 +80,7 @@
       const kaartHTML = `
         <h3>${kaart.vraag}</h3>
         <p>${kaart.uitleg}</p>
-        <p><em>Reflectievraag:</em> ${kaart.reflectie}</p>
+        <p><em class="reflectie">Reflectievraag:</em> ${kaart.reflectie}</p>
       `;
       document.getElementById('kaart').innerHTML = kaartHTML;
     }
