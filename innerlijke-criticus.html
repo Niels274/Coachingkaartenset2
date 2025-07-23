@@ -68,15 +68,25 @@
       }
     ];
 
-   function toonKaart() {
-      const kaart = reflectiekaarten[Math.floor(Math.random() * reflectiekaarten.length)];
-      const kaartHTML = `
-        <h3>${kaart.vraag}</h3>
-        <p>${kaart.uitleg}</p>
-        <p><em class="reflectie">Reflectievraag:</em> ${kaart.reflectie}</p>
-      `;
-      document.getElementById('kaart').innerHTML = kaartHTML;
+   // Array om de laatste drie getrokken indexen te onthouden
+  const laatsteIndices = [];
+
+  function toonKaart() {
+    let index;
+
+    do {
+      index = Math.floor(Math.random() * kaarten.length);
+    } while (laatsteIndices.includes(index) && kaarten.length > laatsteIndices.length);
+
+    // Voeg de nieuwe index toe aan de lijst en houd deze maximaal 3 lang
+    laatsteIndices.push(index);
+    if (laatsteIndices.length > 3) {
+      laatsteIndices.shift(); // verwijder oudste index
     }
-  </script>
+
+    const kaart = kaarten[index];
+    document.getElementById('kaart').innerText = kaart;
+  }
+</script>
 </body>
 </html>
