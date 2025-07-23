@@ -68,30 +68,31 @@
       }
     ];
 
-   const laatsteIndices = [];
+    const laatsteIndices = [];
 
     function toonKaart() {
-      // Genereer lijst van toegestane indices
-      const beschikbareIndices = kaarten
+      const beschikbareIndices = reflectiekaarten
         .map((_, i) => i)
         .filter(i => !laatsteIndices.includes(i));
 
-      // Als er geen andere keuze meer is, reset de uitsluiting
       if (beschikbareIndices.length === 0) {
-        laatsteIndices.length = 0; // reset
-        beschikbareIndices.push(...kaarten.map((_, i) => i));
+        laatsteIndices.length = 0;
+        beschikbareIndices.push(...reflectiekaarten.map((_, i) => i));
       }
 
-      // Kies een index uit de beschikbare indices
       const index = beschikbareIndices[Math.floor(Math.random() * beschikbareIndices.length)];
 
-      // Bewaar index
       laatsteIndices.push(index);
       if (laatsteIndices.length > 3) {
         laatsteIndices.shift();
       }
 
-      document.getElementById('kaart').innerText = kaarten[index];
+      const kaart = reflectiekaarten[index];
+      document.getElementById('kaart').innerHTML = `
+        <h3>${kaart.vraag}</h3>
+        <p><strong>Uitleg:</strong> ${kaart.uitleg}</p>
+        <p><strong>Reflectie:</strong> ${kaart.reflectie}</p>
+      `;
     }
   </script>
 
